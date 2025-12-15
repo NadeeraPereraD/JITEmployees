@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "D:\\GIT\\JITEmployees\\JITEmployees.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|d:\\git\\jitemployees\\jitemployees.api\\models\\departments\\departmentsdeletedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:models\\departments\\departmentsdeletedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|d:\\git\\jitemployees\\jitemployees.api\\interfaces\\idepartmentsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:interfaces\\idepartmentsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|d:\\git\\jitemployees\\jitemployees.api\\models\\departments\\departmentsupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:models\\departments\\departmentsupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|d:\\git\\jitemployees\\jitemployees.api\\models\\departments\\departmentscreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:models\\departments\\departmentscreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|d:\\git\\jitemployees\\jitemployees.api\\models\\departments\\departmentsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:models\\departments\\departmentsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|d:\\git\\jitemployees\\jitemployees.api\\interfaces\\idepartmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:interfaces\\idepartmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,53 +27,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DepartmentsUpdateDto.cs",
-              "DocumentMoniker": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Models\\Departments\\DepartmentsUpdateDto.cs",
-              "RelativeDocumentMoniker": "Models\\Departments\\DepartmentsUpdateDto.cs",
-              "ToolTip": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Models\\Departments\\DepartmentsUpdateDto.cs",
-              "RelativeToolTip": "Models\\Departments\\DepartmentsUpdateDto.cs",
+              "Title": "IDepartmentRepository.cs",
+              "DocumentMoniker": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Interfaces\\IDepartmentRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IDepartmentRepository.cs",
+              "ToolTip": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Interfaces\\IDepartmentRepository.cs",
+              "RelativeToolTip": "Interfaces\\IDepartmentRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T05:37:43.868Z",
+              "WhenOpened": "2025-12-15T05:41:47.9Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DepartmentsDeleteDto.cs",
-              "DocumentMoniker": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Models\\Departments\\DepartmentsDeleteDto.cs",
-              "RelativeDocumentMoniker": "Models\\Departments\\DepartmentsDeleteDto.cs",
-              "ToolTip": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Models\\Departments\\DepartmentsDeleteDto.cs",
-              "RelativeToolTip": "Models\\Departments\\DepartmentsDeleteDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA7AAAAAAAAAA==",
+              "Title": "IDepartmentsService.cs",
+              "DocumentMoniker": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Interfaces\\IDepartmentsService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IDepartmentsService.cs",
+              "ToolTip": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Interfaces\\IDepartmentsService.cs",
+              "RelativeToolTip": "Interfaces\\IDepartmentsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T05:29:34.021Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DepartmentsCreateDto.cs",
-              "DocumentMoniker": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Models\\Departments\\DepartmentsCreateDto.cs",
-              "RelativeDocumentMoniker": "Models\\Departments\\DepartmentsCreateDto.cs",
-              "ToolTip": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Models\\Departments\\DepartmentsCreateDto.cs",
-              "RelativeToolTip": "Models\\Departments\\DepartmentsCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T05:28:43.37Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DepartmentsDto.cs",
-              "DocumentMoniker": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Models\\Departments\\DepartmentsDto.cs",
-              "RelativeDocumentMoniker": "Models\\Departments\\DepartmentsDto.cs",
-              "ToolTip": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Models\\Departments\\DepartmentsDto.cs",
-              "RelativeToolTip": "Models\\Departments\\DepartmentsDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T05:24:01.647Z",
+              "WhenOpened": "2025-12-15T05:41:20.101Z",
               "EditorCaption": ""
             }
           ]

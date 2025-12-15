@@ -1,0 +1,12 @@
+﻿using JITEmployees.API.Models.Departments;
+
+namespace JITEmployees.API.Interfaces
+{
+    public interface IDepartmentsService
+    {
+        Task<(bool IsSuccess, string? ErrorMessage, string? SuccessMessage)> CreateAsync(DepartmentsCreateDto dto);
+        Task<(bool IsSuccess, string? ErrorMessage, string? SuccessMessage)> GetAllDepartmentsAsync(DepartmentsDto dto);
+        Task<(bool IsSuccess, string? ErrorMessage, string? SuccessMessage)> UpdateAsyncById(DepartmentsUpdateDto dto);
+        Task<(bool IsSuccess, string? ErrorMessage, string? SuccessMessage)> DeleteAsyncById(DepartmentsDeleteDto dto);
+    }
+}
