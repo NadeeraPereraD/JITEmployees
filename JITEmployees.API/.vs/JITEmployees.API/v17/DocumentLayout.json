@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "D:\\GIT\\JITEmployees\\JITEmployees.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|d:\\git\\jitemployees\\jitemployees.api\\infrastructure\\dependencyinjection\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:infrastructure\\dependencyinjection\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|d:\\git\\jitemployees\\jitemployees.api\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|d:\\git\\jitemployees\\jitemployees.api\\repositories\\employeesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:repositories\\employeesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|d:\\git\\jitemployees\\jitemployees.api\\repositories\\departmentsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:repositories\\departmentsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|d:\\git\\jitemployees\\jitemployees.api\\interfaces\\iemployeesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:interfaces\\iemployeesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|d:\\git\\jitemployees\\jitemployees.api\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,62 +18,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DepartmentsController.cs",
+              "DocumentMoniker": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Controllers\\DepartmentsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DepartmentsController.cs",
+              "ToolTip": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Controllers\\DepartmentsController.cs",
+              "RelativeToolTip": "Controllers\\DepartmentsController.cs",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAowJcAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T08:56:02.258Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ServiceCollectionExtensions.cs",
-              "DocumentMoniker": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Infrastructure\\DependencyInjection\\ServiceCollectionExtensions.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\DependencyInjection\\ServiceCollectionExtensions.cs",
-              "ToolTip": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Infrastructure\\DependencyInjection\\ServiceCollectionExtensions.cs",
-              "RelativeToolTip": "Infrastructure\\DependencyInjection\\ServiceCollectionExtensions.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T08:53:09.553Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DepartmentsRepository.cs",
-              "DocumentMoniker": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Repositories\\DepartmentsRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\DepartmentsRepository.cs",
-              "ToolTip": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Repositories\\DepartmentsRepository.cs",
-              "RelativeToolTip": "Repositories\\DepartmentsRepository.cs",
-              "ViewState": "AgIAAJwAAAAAAAAAAAAowLcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T08:39:08.976Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "EmployeesRepository.cs",
-              "DocumentMoniker": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Repositories\\EmployeesRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\EmployeesRepository.cs",
-              "ToolTip": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Repositories\\EmployeesRepository.cs",
-              "RelativeToolTip": "Repositories\\EmployeesRepository.cs",
-              "ViewState": "AgIAALQAAAAAAAAAAAAAwLwAAABDAAAAAAAAAA==",
+              "Title": "EmployeesController.cs",
+              "DocumentMoniker": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Controllers\\EmployeesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EmployeesController.cs",
+              "ToolTip": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Controllers\\EmployeesController.cs",
+              "RelativeToolTip": "Controllers\\EmployeesController.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAQwJkAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T08:38:33.392Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IEmployeesRepository.cs",
-              "DocumentMoniker": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Interfaces\\IEmployeesRepository.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IEmployeesRepository.cs",
-              "ToolTip": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Interfaces\\IEmployeesRepository.cs",
-              "RelativeToolTip": "Interfaces\\IEmployeesRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAB2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T08:30:58.898Z",
+              "WhenOpened": "2025-12-15T08:55:51.28Z",
               "EditorCaption": ""
             }
           ]

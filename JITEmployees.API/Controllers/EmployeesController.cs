@@ -1,6 +1,8 @@
 ﻿using JITEmployees.API.Exceptions;
 using JITEmployees.API.Interfaces;
 using JITEmployees.API.Models.Departments;
+using JITEmployees.API.Models.Employees;
+using JITEmployees.API.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,19 +10,19 @@ namespace JITEmployees.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DepartmentsController : ControllerBase
+    public class EmployeesController : ControllerBase
     {
-        private readonly IDepartmentsService _departmentsService;
-        private readonly ILogger<DepartmentsController> _logger;
+        private readonly IEmployeesService _employeesService;
+        private readonly ILogger<EmployeesController> _logger;
 
-        public DepartmentsController(IDepartmentsService departmentsService, ILogger<DepartmentsController> logger)
+        public EmployeesController(IEmployeesService employeesService, ILogger<EmployeesController> logger)
         {
-            _departmentsService = departmentsService;
+            _employeesService = employeesService;
             _logger = logger;
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] DepartmentsCreateDto dto)
+        public async Task<IActionResult> Create([FromBody] EmployeesCreateDto dto)
         {
             if (dto == null)
             {
@@ -30,15 +32,15 @@ namespace JITEmployees.API.Controllers
 
             try
             {
-                var (IsSuccess, ErrorMessage, SuccessMessage) = await _departmentsService.CreateAsync(dto);
+                var (IsSuccess, ErrorMessage, SuccessMessage) = await _employeesService.CreateAsync(dto);
 
                 if (!IsSuccess)
                 {
-                    _logger.LogWarning("Failed to create department for DTO {@DTO}. Error: {Error}", dto, ErrorMessage);
+                    _logger.LogWarning("Failed to create employee for DTO {@DTO}. Error: {Error}", dto, ErrorMessage);
                     return BadRequest(new { Message = ErrorMessage });
                 }
 
-                _logger.LogInformation("Department created successfully for DTO {@DTO}", dto);
+                _logger.LogInformation("Employee created successfully for DTO {@DTO}", dto);
                 return Ok(new { Message = SuccessMessage });
             }
             catch (NotFoundException ex)
@@ -58,7 +60,7 @@ namespace JITEmployees.API.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Unexpected error while creating department for DTO {@DTO}", dto);
+                _logger.LogError(ex, "Unexpected error while creating employee for DTO {@DTO}", dto);
                 return StatusCode(500, new { Message = "Internal server error" });
             }
         }
@@ -68,26 +70,26 @@ namespace JITEmployees.API.Controllers
         {
             try
             {
-                var (Departments, ErrorMessage, SuccessMessage) = await _departmentsService.GetAllDepartmentsAsync();
+                var (Employees, ErrorMessage, SuccessMessage) = await _employeesService.GetAllEmployeesAsync();
 
                 if (!string.IsNullOrEmpty(ErrorMessage))
                 {
-                    _logger.LogWarning("Failed to fetch departments. Error: {Error}", ErrorMessage);
+                    _logger.LogWarning("Failed to fetch employees. Error: {Error}", ErrorMessage);
                     return BadRequest(new { Message = ErrorMessage });
                 }
 
-                _logger.LogInformation("Fetched {Count} departments successfully.", Departments.Count());
-                return Ok(Departments);
+                _logger.LogInformation("Fetched {Count} employees successfully.", Employees.Count());
+                return Ok(Employees);
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Unexpected error while fetching departments.");
+                _logger.LogError(ex, "Unexpected error while fetching employees.");
                 return StatusCode(500, new { Message = "Internal server error" });
             }
         }
 
         [HttpPut]
-        public async Task<IActionResult> Update([FromBody] DepartmentsUpdateDto dto)
+        public async Task<IActionResult> Update([FromBody] EmployeesUpdateDto dto)
         {
             if (dto == null || dto.Id <= 0)
             {
@@ -97,31 +99,31 @@ namespace JITEmployees.API.Controllers
 
             try
             {
-                var (IsSuccess, ErrorMessage, SuccessMessage) = await _departmentsService.UpdateAsyncById(dto);
+                var (IsSuccess, ErrorMessage, SuccessMessage) = await _employeesService.UpdateAsyncById(dto);
 
                 if (!IsSuccess)
                 {
-                    _logger.LogWarning("Failed to update department {@DTO}. Error: {Error}", dto, ErrorMessage);
+                    _logger.LogWarning("Failed to update employee {@DTO}. Error: {Error}", dto, ErrorMessage);
                     return BadRequest(new { Message = ErrorMessage });
                 }
 
-                _logger.LogInformation("Department updated successfully {@DTO}", dto);
+                _logger.LogInformation("Employee updated successfully {@DTO}", dto);
                 return Ok(new { Message = SuccessMessage });
             }
             catch (NotFoundException ex)
             {
-                _logger.LogWarning(ex, "Department not found for update {@DTO}", dto);
+                _logger.LogWarning(ex, "Employee not found for update {@DTO}", dto);
                 return NotFound(new { Message = ex.Message });
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Unexpected error while updating department {@DTO}", dto);
+                _logger.LogError(ex, "Unexpected error while updating employee {@DTO}", dto);
                 return StatusCode(500, new { Message = "Internal server error" });
             }
         }
 
         [HttpDelete]
-        public async Task<IActionResult> Delete([FromBody] DepartmentsDeleteDto dto)
+        public async Task<IActionResult> Delete([FromBody] EmployeesDeleteDto dto)
         {
             if (dto == null || dto.Id <= 0)
             {
@@ -131,25 +133,25 @@ namespace JITEmployees.API.Controllers
 
             try
             {
-                var (IsSuccess, ErrorMessage, SuccessMessage) = await _departmentsService.DeleteAsyncById(dto);
+                var (IsSuccess, ErrorMessage, SuccessMessage) = await _employeesService.DeleteAsyncById(dto);
 
                 if (!IsSuccess)
                 {
-                    _logger.LogWarning("Failed to delete department {@DTO}. Error: {Error}", dto, ErrorMessage);
+                    _logger.LogWarning("Failed to delete employee {@DTO}. Error: {Error}", dto, ErrorMessage);
                     return BadRequest(new { Message = ErrorMessage });
                 }
 
-                _logger.LogInformation("Department deleted (soft delete) successfully {@DTO}", dto);
+                _logger.LogInformation("Employee deleted (soft delete) successfully {@DTO}", dto);
                 return Ok(new { Message = SuccessMessage });
             }
             catch (NotFoundException ex)
             {
-                _logger.LogWarning(ex, "Department not found for delete {@DTO}", dto);
+                _logger.LogWarning(ex, "Employee not found for delete {@DTO}", dto);
                 return NotFound(new { Message = ex.Message });
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Unexpected error while deleting department {@DTO}", dto);
+                _logger.LogError(ex, "Unexpected error while deleting employee {@DTO}", dto);
                 return StatusCode(500, new { Message = "Internal server error" });
             }
         }
