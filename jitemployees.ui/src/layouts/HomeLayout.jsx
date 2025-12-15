@@ -3,6 +3,8 @@ import LeftPanel from "../components/common/LeftPanel";
 import Typography from "@mui/material/Typography";
 import DepartmentForm from "./departments/DepartmentForm";
 import DepartmentTable from "./departments/DepartmentTable";
+import EmployeeForm from "./employees/EmployeeForm";
+import EmployeeTable from "./employees/EmployeeTable";
 
 export default function HomeLayout() {
   return (
@@ -28,8 +30,10 @@ export default function HomeLayout() {
           Responsive drawer
         </Typography>
         <div>
-            <DepartmentForm/>
-            <DepartmentTable/>
+            {/* <DepartmentForm/> */}
+            <EmployeeForm/>
+            {/* <DepartmentTable/> */}
+            <EmployeeTable/>
         </div>
       </div>
     </div>
