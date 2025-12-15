@@ -1,6 +1,7 @@
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using JITEmployees.API.Infrastructure.DependencyInjection;
+using JITEmployees.API.Services.Validations.Departments;
 using JITEmployees.API.Services.Validations.Employees;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,6 +18,8 @@ builder.Services.AddServices();
 
 builder.Services.AddValidatorsFromAssembly(typeof(CreateEmployeeValidator).Assembly);
 builder.Services.AddValidatorsFromAssembly(typeof(UpdateEmployeeValidator).Assembly);
+builder.Services.AddValidatorsFromAssembly(typeof(CreateDepartmentValidator).Assembly);
+builder.Services.AddValidatorsFromAssembly(typeof(UpdateDepartmentValidator).Assembly);
 
 builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddFluentValidationClientsideAdapters();
