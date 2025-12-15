@@ -96,7 +96,10 @@ namespace JITEmployees.API.Repositories
                     {
                         Id = reader.GetInt32(reader.GetOrdinal("Id")),
                         DepartmentCode = reader.GetString(reader.GetOrdinal("DepartmentCode")),
-                        DepartmentName = reader.GetString(reader.GetOrdinal("DepartmentName"))
+                        DepartmentName = reader.GetString(reader.GetOrdinal("DepartmentName")),
+                        IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive")),
+                        CreatedDate = reader.GetDateTime(reader.GetOrdinal("CreatedDate")),
+                        UpdatedDate = reader.GetDateTime(reader.GetOrdinal("UpdatedDate"))
                     });
                 }
 
