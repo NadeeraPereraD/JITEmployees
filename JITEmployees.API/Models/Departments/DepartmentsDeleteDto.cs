@@ -3,6 +3,5 @@
     public class DepartmentsDeleteDto
     {
         public int Id { get; set; }
-        public DateTime UpdatedDate { get; set; }
     }
 }

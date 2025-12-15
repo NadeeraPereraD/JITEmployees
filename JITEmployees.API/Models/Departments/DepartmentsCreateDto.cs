@@ -4,6 +4,5 @@
     {
         public string DepartmentCode { get; set; } = null!;
         public string DepartmentName { get; set; } = null!;
-        public DateTime CreatedDate { get; set; }
     }
 }

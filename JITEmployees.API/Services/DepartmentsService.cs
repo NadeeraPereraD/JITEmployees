@@ -16,9 +16,9 @@ namespace JITEmployees.API.Services
         {
             return await _repo.CreateAsync(dto);
         }
-        public Task<(bool IsSuccess, string? ErrorMessage, string? SuccessMessage)> GetAllDepartmentsAsync(DepartmentsDto dto)
+        public Task<(IEnumerable<DepartmentsDto> departments, string? ErrorMessage, string? SuccessMessage)> GetAllDepartmentsAsync()
         {
-            return _repo.GetAllAsync(dto);
+            return _repo.GetAllAsync();
         }
         public async Task<(bool IsSuccess, string? ErrorMessage, string? SuccessMessage)> UpdateAsyncById(DepartmentsUpdateDto dto)
         {

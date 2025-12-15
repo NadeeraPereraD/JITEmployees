@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\GIT\\JITEmployees\\JITEmployees.API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|d:\\git\\jitemployees\\jitemployees.api\\services\\departmentsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:services\\departmentsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|d:\\git\\jitemployees\\jitemployees.api\\repositories\\departmentsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:repositories\\departmentsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|d:\\git\\jitemployees\\jitemployees.api\\interfaces\\idepartmentsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:interfaces\\idepartmentsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|d:\\git\\jitemployees\\jitemployees.api\\services\\departmentsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:services\\departmentsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,10 +25,6 @@
           "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "IDepartmentsService.cs",
@@ -32,20 +32,37 @@
               "RelativeDocumentMoniker": "Interfaces\\IDepartmentsService.cs",
               "ToolTip": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Interfaces\\IDepartmentsService.cs",
               "RelativeToolTip": "Interfaces\\IDepartmentsService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAB3AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T06:07:57.186Z",
+              "WhenOpened": "2025-12-15T06:36:45.919Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DepartmentsRepository.cs",
+              "DocumentMoniker": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Repositories\\DepartmentsRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\DepartmentsRepository.cs",
+              "ToolTip": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Repositories\\DepartmentsRepository.cs",
+              "RelativeToolTip": "Repositories\\DepartmentsRepository.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAQwGsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T06:13:53.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "DepartmentsService.cs",
               "DocumentMoniker": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Services\\DepartmentsService.cs",
               "RelativeDocumentMoniker": "Services\\DepartmentsService.cs",
               "ToolTip": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Services\\DepartmentsService.cs",
               "RelativeToolTip": "Services\\DepartmentsService.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBwAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwBIAAACEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-15T06:05:52.56Z",
               "EditorCaption": ""
