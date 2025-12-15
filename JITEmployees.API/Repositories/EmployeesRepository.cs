@@ -17,37 +17,52 @@ namespace JITEmployees.API.Repositories
 
         public async Task<(bool IsSuccess, string? ErrorMessage, string? SuccessMessage)> CreateAsync(EmployeesCreateDto dto)
         {
+            await using var conn = new SqlConnection(_connectionString);
+            await conn.OpenAsync();
+
+            await using var transaction = await conn.BeginTransactionAsync();
+
             try
             {
-                await using var conn = new SqlConnection(_connectionString);
-                await conn.OpenAsync();
+                int departmentId;
 
-                await using var cmd = new SqlCommand("usp_Employees_Create", conn)
+                await using (var deptCmd = new SqlCommand(
+                    @"SELECT Id 
+              FROM Departments 
+              WHERE DepartmentName = @DepartmentName 
+                AND IsActive = 1", conn, (SqlTransaction)transaction))
+                {
+                    deptCmd.Parameters.Add(
+                        new SqlParameter("@DepartmentName", SqlDbType.NVarChar, 100)
+                        { Value = dto.DepartmentName });
+
+                    var result = await deptCmd.ExecuteScalarAsync();
+
+                    if (result == null)
+                    {
+                        await transaction.RollbackAsync();
+                        return (false, "Invalid or inactive department.", null);
+                    }
+
+                    departmentId = Convert.ToInt32(result);
+                }
+
+                await using var cmd = new SqlCommand("usp_Employees_Create", conn, (SqlTransaction)transaction)
                 {
                     CommandType = CommandType.StoredProcedure
                 };
 
-                cmd.Parameters.Add(new SqlParameter("@FirstName", SqlDbType.NVarChar, 50)
-                { Value = dto.FirstName });
-
-                cmd.Parameters.Add(new SqlParameter("@LastName", SqlDbType.NVarChar, 50)
-                { Value = dto.LastName });
-
-                cmd.Parameters.Add(new SqlParameter("@Email", SqlDbType.NVarChar, 100)
-                { Value = dto.Email });
-
-                cmd.Parameters.Add(new SqlParameter("@DateOfBirth", SqlDbType.Date)
-                { Value = dto.DateOfBirth });
-
+                cmd.Parameters.Add(new SqlParameter("@FirstName", SqlDbType.NVarChar, 50) { Value = dto.FirstName });
+                cmd.Parameters.Add(new SqlParameter("@LastName", SqlDbType.NVarChar, 50) { Value = dto.LastName });
+                cmd.Parameters.Add(new SqlParameter("@Email", SqlDbType.NVarChar, 100) { Value = dto.Email });
+                cmd.Parameters.Add(new SqlParameter("@DateOfBirth", SqlDbType.Date) { Value = dto.DateOfBirth });
                 cmd.Parameters.Add(new SqlParameter("@Salary", SqlDbType.Decimal)
                 {
                     Precision = 12,
                     Scale = 2,
                     Value = dto.Salary
                 });
-
-                cmd.Parameters.Add(new SqlParameter("@DepartmentId", SqlDbType.Int)
-                { Value = dto.DepartmentId });
+                cmd.Parameters.Add(new SqlParameter("@DepartmentId", SqlDbType.Int) { Value = departmentId });
 
                 var errorParam = new SqlParameter("@ErrorMessage", SqlDbType.NVarChar, 500)
                 {
@@ -62,19 +77,17 @@ namespace JITEmployees.API.Repositories
                 cmd.Parameters.Add(successParam);
 
                 await cmd.ExecuteNonQueryAsync();
-
-                var errorMessage = errorParam.Value as string;
-                var successMessage = successParam.Value as string;
+                await transaction.CommitAsync();
 
                 return (
-                    IsSuccess: string.IsNullOrEmpty(errorMessage),
-                    ErrorMessage: errorMessage,
-                    SuccessMessage: successMessage
+                    IsSuccess: string.IsNullOrEmpty(errorParam.Value as string),
+                    ErrorMessage: errorParam.Value as string,
+                    SuccessMessage: successParam.Value as string
                 );
-
             }
             catch
             {
+                await transaction.RollbackAsync();
                 throw;
             }
         }
@@ -117,6 +130,7 @@ namespace JITEmployees.API.Repositories
                         Age = reader.GetInt32(reader.GetOrdinal("Age")),
                         Salary = reader.GetDecimal(reader.GetOrdinal("Salary")),
                         DepartmentId = reader.GetInt32(reader.GetOrdinal("DepartmentId")),
+                        DepartmentName = reader.GetString(reader.GetOrdinal("DepartmentName")),
                         IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive")),
                         CreatedDate = reader.GetDateTime(reader.GetOrdinal("CreatedDate")),
                         UpdatedDate = reader.GetDateTime(reader.GetOrdinal("UpdatedDate"))
@@ -135,12 +149,37 @@ namespace JITEmployees.API.Repositories
         }
         public async Task<(bool IsSuccess, string? ErrorMessage, string? SuccessMessage)> UpdatedByKeyAsync(EmployeesUpdateDto dto)
         {
+            await using var conn = new SqlConnection(_connectionString);
+            await conn.OpenAsync();
+
+            await using var transaction = await conn.BeginTransactionAsync();
+
             try
             {
-                await using var conn = new SqlConnection(_connectionString);
-                await conn.OpenAsync();
+                int departmentId;
 
-                await using var cmd = new SqlCommand("usp_Employees_Update", conn)
+                await using (var deptCmd = new SqlCommand(
+                    @"SELECT Id
+              FROM Departments
+              WHERE DepartmentName = @DepartmentName
+                AND IsActive = 1", conn, (SqlTransaction)transaction))
+                {
+                    deptCmd.Parameters.Add(
+                        new SqlParameter("@DepartmentName", SqlDbType.NVarChar, 100)
+                        { Value = dto.DepartmentName });
+
+                    var result = await deptCmd.ExecuteScalarAsync();
+
+                    if (result == null)
+                    {
+                        await transaction.RollbackAsync();
+                        return (false, "Invalid or inactive department.", null);
+                    }
+
+                    departmentId = Convert.ToInt32(result);
+                }
+
+                await using var cmd = new SqlCommand("usp_Employees_Update", conn, (SqlTransaction)transaction)
                 {
                     CommandType = CommandType.StoredProcedure
                 };
@@ -156,7 +195,8 @@ namespace JITEmployees.API.Repositories
                     Scale = 2,
                     Value = dto.Salary
                 });
-                cmd.Parameters.Add(new SqlParameter("@DepartmentId", SqlDbType.Int) { Value = dto.DepartmentId });
+                cmd.Parameters.Add(new SqlParameter("@DepartmentId", SqlDbType.Int)
+                { Value = departmentId });
 
                 var errorParam = new SqlParameter("@ErrorMessage", SqlDbType.NVarChar, 500)
                 { Direction = ParameterDirection.Output };
@@ -167,6 +207,7 @@ namespace JITEmployees.API.Repositories
                 cmd.Parameters.Add(successParam);
 
                 await cmd.ExecuteNonQueryAsync();
+                await transaction.CommitAsync();
 
                 return (
                     IsSuccess: string.IsNullOrEmpty(errorParam.Value as string),
@@ -176,6 +217,7 @@ namespace JITEmployees.API.Repositories
             }
             catch
             {
+                await transaction.RollbackAsync();
                 throw;
             }
         }
