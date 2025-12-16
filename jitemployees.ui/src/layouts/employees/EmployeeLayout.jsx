@@ -34,7 +34,8 @@ export default function EmployeeLayout() {
         try {
             const data = await getEmployees();
             console.log(data);
-            const mappedData = data.map((d) => ({
+            const mappedData = data.map((d) => {
+            return {
                 id: d.id,
                 firstName: d.firstName,
                 lastName: d.lastName,
@@ -42,9 +43,11 @@ export default function EmployeeLayout() {
                 dob: d.dateOfBirth,
                 age: d.age,
                 salary: d.salary,
-                department: d.departmentName,
+                department: d.departmentName, 
+                departmentName: d.departmentName, 
                 isActive: d.isActive,
-            }));
+            };
+        });
     
             setEmployee(mappedData);
         } catch (err) {
@@ -63,7 +66,7 @@ export default function EmployeeLayout() {
           if (selectedEmp) {
             await updateEmployee(employee);
           } else {
-            await createEmployee(employee);
+            await createEmployee(employee, departments);
           }
     
           setSelectedEmp(null);
@@ -81,7 +84,7 @@ export default function EmployeeLayout() {
 
     const handleDelete = async (id) => {
         if (!window.confirm("Are you sure?")) return;
-    
+        console.log(id)
         try {
           await deleteEmployee(id);
           loadEmployees();

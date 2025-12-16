@@ -32,19 +32,6 @@ export default function EmployeeForm({
 
   const [error, setError] = useState(false);
 
-  const formatSalary = (value) => {
-    if (!value) return "";
-    return Number(value).toLocaleString("en-US", {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    });
-  };
-
-  const parseSalary = (value) => {
-    return value.replace(/,/g, "");
-  };
-
-  // Calculate age whenever DOB changes
   useEffect(() => {
     if (employee.dob) {
       const today = new Date();
@@ -189,7 +176,7 @@ export default function EmployeeForm({
               }
             >
               {departments.map((dept) => (
-                <MenuItem key={dept.code} value={dept.code}>
+                <MenuItem key={dept.id} value={dept.name}>
                   {dept.name}
                 </MenuItem>
               ))}

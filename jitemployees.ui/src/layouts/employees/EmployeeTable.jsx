@@ -32,7 +32,7 @@ export default function EmployeeTable({
     { label: "Edit", onClick: onEdit, color: "primary" },
     {
       label: "Delete",
-      onClick: (row) => handleDelete(row.email),
+      onClick: (row) => handleDelete(row.id),
       color: "error",
     },
   ];

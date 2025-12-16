@@ -7,16 +7,18 @@ export async function getEmployees() {
     return res.json();
 }
 
-export async function createEmployee(employee) {  
+export async function createEmployee(employee, departments) {  
+    const selectedDept = departments.find(d=> d.name === employee.department);
+    
     const payload = {
         firstName: employee.firstName,
         lastName: employee.lastName,
         email: employee.email,
-        dob: employee.dob,
-        age: employee.age,
+        dateOfBirth: employee.dob,
         salary: employee.salary,
-        department: employee.department
+        departmentName: employee.department,
     };
+    console.log(payload)
 
     const res = await fetch(API_URL, {
         method: "POST",
@@ -39,10 +41,9 @@ export async function updateEmployee(employee) {
         firstName: employee.firstName,
         lastName: employee.lastName,
         email: employee.email,
-        dob: employee.dob,
-        age: employee.age,
+        dateOfBirth: employee.dob,
         salary: employee.salary,
-        department: employee.department
+        departmentName: employee.department
     };
 
     const res = await fetch(`${API_URL}`, {
