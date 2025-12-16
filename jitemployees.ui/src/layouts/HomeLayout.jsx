@@ -5,6 +5,7 @@ import DepartmentForm from "./departments/DepartmentForm";
 import DepartmentTable from "./departments/DepartmentTable";
 import EmployeeForm from "./employees/EmployeeForm";
 import EmployeeTable from "./employees/EmployeeTable";
+import DepartmentLayout from "./departments/DepartmentLayout";
 
 export default function HomeLayout() {
   return (
@@ -31,9 +32,10 @@ export default function HomeLayout() {
         </Typography>
         <div>
             {/* <DepartmentForm/> */}
-            <EmployeeForm/>
+            {/* <EmployeeForm/> */}
             {/* <DepartmentTable/> */}
-            <EmployeeTable/>
+            {/* <EmployeeTable/> */}
+            <DepartmentLayout/>
         </div>
       </div>
     </div>

@@ -9,7 +9,7 @@ export default function DepartmentTable({ departments = [], onEdit, handleDelete
 
   const actions = [
     { label: "Edit", onClick: onEdit, color: "primary" },
-    { label: "Delete", onClick: (row) => handleDelete(row.code), color: "error" },
+    { label: "Delete", onClick: (row) => handleDelete(row.id), color: "error" },
   ];
 
   return <DataTable data={departments} columns={columns} actions={actions} />;

@@ -7,20 +7,16 @@
       "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|d:\\git\\jitemployees\\jitemployees.api\\services\\validations\\departments\\updatedepartmentvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:services\\validations\\departments\\updatedepartmentvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|d:\\git\\jitemployees\\jitemployees.api\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|d:\\git\\jitemployees\\jitemployees.api\\services\\validations\\departments\\createdepartmentvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:services\\validations\\departments\\createdepartmentvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|d:\\git\\jitemployees\\jitemployees.api\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|d:\\git\\jitemployees\\jitemployees.api\\services\\validations\\employees\\createemployeevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:services\\validations\\employees\\createemployeevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|d:\\git\\jitemployees\\jitemployees.api\\services\\validations\\employees\\updateemployeevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:services\\validations\\employees\\updateemployeevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|d:\\git\\jitemployees\\jitemployees.api\\models\\employees\\employeesupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:models\\employees\\employeesupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|d:\\git\\jitemployees\\jitemployees.api\\repositories\\employeesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,16 +27,8 @@
       "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:models\\employees\\employeesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|d:\\git\\jitemployees\\jitemployees.api\\models\\employees\\employeesupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:models\\employees\\employeesupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|d:\\git\\jitemployees\\jitemployees.api\\models\\employees\\employeescreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:models\\employees\\employeescreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|d:\\git\\jitemployees\\jitemployees.api\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5F5B414-3F7E-4BBE-970B-FFAE5AEE756B}|JITEmployees.API.csproj|solutionrelative:controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,72 +46,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UpdateDepartmentValidator.cs",
-              "DocumentMoniker": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Services\\Validations\\Departments\\UpdateDepartmentValidator.cs",
-              "RelativeDocumentMoniker": "Services\\Validations\\Departments\\UpdateDepartmentValidator.cs",
-              "ToolTip": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Services\\Validations\\Departments\\UpdateDepartmentValidator.cs",
-              "RelativeToolTip": "Services\\Validations\\Departments\\UpdateDepartmentValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T11:14:11.649Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CreateDepartmentValidator.cs",
-              "DocumentMoniker": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Services\\Validations\\Departments\\CreateDepartmentValidator.cs",
-              "RelativeDocumentMoniker": "Services\\Validations\\Departments\\CreateDepartmentValidator.cs",
-              "ToolTip": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Services\\Validations\\Departments\\CreateDepartmentValidator.cs",
-              "RelativeToolTip": "Services\\Validations\\Departments\\CreateDepartmentValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T11:13:45.95Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAABUAAABCAAAAAAAAAA==",
+              "ToolTip": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAACsAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T11:00:33.563Z",
+              "WhenOpened": "2025-12-16T04:37:06.094Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UpdateEmployeeValidator.cs",
-              "DocumentMoniker": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Services\\Validations\\Employees\\UpdateEmployeeValidator.cs",
-              "RelativeDocumentMoniker": "Services\\Validations\\Employees\\UpdateEmployeeValidator.cs",
-              "ToolTip": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Services\\Validations\\Employees\\UpdateEmployeeValidator.cs",
-              "RelativeToolTip": "Services\\Validations\\Employees\\UpdateEmployeeValidator.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAgwCEAAABCAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "DepartmentsController.cs",
+              "DocumentMoniker": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Controllers\\DepartmentsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DepartmentsController.cs",
+              "ToolTip": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Controllers\\DepartmentsController.cs*",
+              "RelativeToolTip": "Controllers\\DepartmentsController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T10:58:32.598Z",
+              "WhenOpened": "2025-12-16T03:31:28.711Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CreateEmployeeValidator.cs",
-              "DocumentMoniker": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Services\\Validations\\Employees\\CreateEmployeeValidator.cs",
-              "RelativeDocumentMoniker": "Services\\Validations\\Employees\\CreateEmployeeValidator.cs",
-              "ToolTip": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Services\\Validations\\Employees\\CreateEmployeeValidator.cs",
-              "RelativeToolTip": "Services\\Validations\\Employees\\CreateEmployeeValidator.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T10:47:11.009Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "EmployeesUpdateDto.cs",
               "DocumentMoniker": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Models\\Employees\\EmployeesUpdateDto.cs",
               "RelativeDocumentMoniker": "Models\\Employees\\EmployeesUpdateDto.cs",
@@ -136,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "EmployeesDto.cs",
               "DocumentMoniker": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Models\\Employees\\EmployeesDto.cs",
               "RelativeDocumentMoniker": "Models\\Employees\\EmployeesDto.cs",
@@ -144,12 +93,11 @@
               "RelativeToolTip": "Models\\Employees\\EmployeesDto.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAxwAsAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T10:08:46.903Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-15T10:08:46.903Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "EmployeesCreateDto.cs",
               "DocumentMoniker": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Models\\Employees\\EmployeesCreateDto.cs",
               "RelativeDocumentMoniker": "Models\\Employees\\EmployeesCreateDto.cs",
@@ -157,12 +105,11 @@
               "RelativeToolTip": "Models\\Employees\\EmployeesCreateDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T09:52:09.336Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-15T09:52:09.336Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "EmployeesRepository.cs",
               "DocumentMoniker": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Repositories\\EmployeesRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\EmployeesRepository.cs",
@@ -170,18 +117,17 @@
               "RelativeToolTip": "Repositories\\EmployeesRepository.cs",
               "ViewState": "AgIAAPIAAAAAAAAAAAAAAIMAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-15T09:56:43.022Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-15T09:56:43.022Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
               "Title": "EmployeesController.cs",
               "DocumentMoniker": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Controllers\\EmployeesController.cs",
               "RelativeDocumentMoniker": "Controllers\\EmployeesController.cs",
               "ToolTip": "D:\\GIT\\JITEmployees\\JITEmployees.API\\Controllers\\EmployeesController.cs",
               "RelativeToolTip": "Controllers\\EmployeesController.cs",
-              "ViewState": "AgIAAIgAAAAAAAAAAAAQwJkAAABOAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAiwJkAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-15T08:55:51.28Z",
               "EditorCaption": ""
