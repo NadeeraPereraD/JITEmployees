@@ -7,8 +7,16 @@ import EmployeeForm from "./employees/EmployeeForm";
 import EmployeeTable from "./employees/EmployeeTable";
 import DepartmentLayout from "./departments/DepartmentLayout";
 import EmployeeLayout from "./employees/EmployeeLayout";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 
 export default function HomeLayout() {
+  const location = useLocation();
+
+  const getTitle = () => {
+    if (location.pathname.startsWith("/employee")) return "Employees";
+    if (location.pathname.startsWith("/department")) return "Departments";
+    return "Departments"; // default
+  };
   return (
     <div className="d-flex">
       <LeftPanel />
@@ -29,11 +37,16 @@ export default function HomeLayout() {
             color: "white"
           }}
         >
-          Responsive drawer
+          {getTitle()}
         </Typography>
         <div>
+          <Routes>
+            <Route path="/" element={<Navigate to="/department" replace />} />
+            <Route path="/department" element={<DepartmentLayout />} />
+            <Route path="/employee" element={<EmployeeLayout />} />
+          </Routes>
             {/* <DepartmentLayout/> */}
-            <EmployeeLayout/>
+            {/* <EmployeeLayout/> */}
         </div>
       </div>
     </div>

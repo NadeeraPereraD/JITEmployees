@@ -4,12 +4,13 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HomeLayout from './layouts/HomeLayout';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <HomeLayout/>
-    </>
+    </BrowserRouter>
   )
 }
 
