@@ -6,6 +6,7 @@ import DepartmentTable from "./departments/DepartmentTable";
 import EmployeeForm from "./employees/EmployeeForm";
 import EmployeeTable from "./employees/EmployeeTable";
 import DepartmentLayout from "./departments/DepartmentLayout";
+import EmployeeLayout from "./employees/EmployeeLayout";
 
 export default function HomeLayout() {
   return (
@@ -31,11 +32,8 @@ export default function HomeLayout() {
           Responsive drawer
         </Typography>
         <div>
-            {/* <DepartmentForm/> */}
-            {/* <EmployeeForm/> */}
-            {/* <DepartmentTable/> */}
-            {/* <EmployeeTable/> */}
-            <DepartmentLayout/>
+            {/* <DepartmentLayout/> */}
+            <EmployeeLayout/>
         </div>
       </div>
     </div>

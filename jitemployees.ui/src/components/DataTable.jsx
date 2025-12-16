@@ -20,11 +20,23 @@ export default function DataTable({ data = [], columns = [], actions = [] }) {
     columns.some((col) => {
       const value = row[col.field];
       return (
-        value &&
-        value.toString().toLowerCase().includes(search.toLowerCase())
+        value && value.toString().toLowerCase().includes(search.toLowerCase())
       );
     })
   );
+
+  const formatDate = (value) => {
+    if (!value) return "";
+    return new Date(value).toISOString().split("T")[0];
+  };
+
+  const formatCurrency = (value) => {
+    if (value == null) return "";
+    return Number(value).toLocaleString("en-US", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
+  };
 
   return (
     <Box sx={{ p: 3 }}>
@@ -58,7 +70,11 @@ export default function DataTable({ data = [], columns = [], actions = [] }) {
               filteredData.map((row, idx) => (
                 <TableRow key={row.id || idx}>
                   {columns.map((col) => (
-                    <TableCell key={col.field}>{row[col.field]}</TableCell>
+                    <TableCell key={col.field}>
+                      {col.format
+                        ? col.format(row[col.field], row)
+                        : row[col.field]}
+                    </TableCell>
                   ))}
 
                   {actions.length > 0 && (

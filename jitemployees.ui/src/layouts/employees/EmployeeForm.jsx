@@ -13,7 +13,13 @@ import {
 import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 
-export default function EmployeeForm({ departments = [] }) {
+export default function EmployeeForm({
+  onSave,
+  loading,
+  selectedEmp,
+  clearSelection,
+  departments = [],
+}) {
   const [employee, setEmployee] = useState({
     firstName: "",
     lastName: "",
@@ -24,8 +30,19 @@ export default function EmployeeForm({ departments = [] }) {
     department: "",
   });
 
-  const [error, setError] = useState({});
-  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+
+  const formatSalary = (value) => {
+    if (!value) return "";
+    return Number(value).toLocaleString("en-US", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
+  };
+
+  const parseSalary = (value) => {
+    return value.replace(/,/g, "");
+  };
 
   // Calculate age whenever DOB changes
   useEffect(() => {
@@ -43,6 +60,23 @@ export default function EmployeeForm({ departments = [] }) {
     }
   }, [employee.dob]);
 
+  useEffect(() => {
+    if (selectedEmp) {
+      setEmployee(selectedEmp);
+    }
+  }, [selectedEmp]);
+
+  useEffect(() => {
+    if (selectedEmp) {
+      setEmployee({
+        ...selectedEmp,
+        dob: selectedEmp.dob
+          ? new Date(selectedEmp.dob) 
+          : null,
+      });
+    }
+  }, [selectedEmp]);
+
   const submit = () => {
     const newError = {};
     if (!employee.firstName) newError.firstName = true;
@@ -56,18 +90,16 @@ export default function EmployeeForm({ departments = [] }) {
 
     if (Object.keys(newError).length > 0) return;
 
-    // Simulate API call
-    setLoading(true);
-    setTimeout(() => {
-      console.log("Employee saved:", employee);
-      setLoading(false);
-    }, 1000);
+    onSave(employee);
+    setEmployee({ firstName: "", lastName: "", email: "", dob: "", salary: "", department: "" });
+    setError(false);
+    clearSelection();
   };
 
   return (
     <Paper elevation={3} sx={{ p: 3, maxWidth: "calc(100vw - 240px)" }}>
       <Typography variant="h6" gutterBottom>
-        Add Employee
+        {selectedEmp ? "Edit Employee" : "Add Employee"}
       </Typography>
 
       <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -116,9 +148,7 @@ export default function EmployeeForm({ departments = [] }) {
           <DatePicker
             label="Date of Birth"
             value={employee.dob}
-            onChange={(newValue) =>
-              setEmployee({ ...employee, dob: newValue })
-            }
+            onChange={(newValue) => setEmployee({ ...employee, dob: newValue })}
             renderInput={(params) => (
               <TextField
                 {...params}
@@ -140,7 +170,6 @@ export default function EmployeeForm({ departments = [] }) {
 
           <TextField
             label="Salary"
-            type="number"
             value={employee.salary}
             error={!!error.salary}
             helperText={error.salary ? "Salary is required" : ""}
